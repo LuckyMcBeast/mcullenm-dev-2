@@ -15,7 +15,7 @@ generate-dist:
 	./tools/generate.sh
 
 create-h2o:
-	$(ENGINE) run --name $(CTNAME) -p 8080:8080 -d mcullenm_dev_h2o
+	$(ENGINE) run --name $(CTNAME) -p 8081:8080 -d mcullenm_dev_h2o
 
 start-h2o:
 	$(ENGINE) container start $(CTNAME)

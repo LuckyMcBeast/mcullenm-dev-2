@@ -9,9 +9,12 @@ pre {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 1px solid #A9B665;
-  }
+}
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     color: #D8A657;
     margin-bottom: 0.5rem;
 }
@@ -51,17 +54,18 @@ a {
     color: #D3869B;
 }
 
-ol, ul {
+ol,
+ul {
     padding: 0.5rem;
     padding-left: 1rem;
 }
 
 ol {
-    list-style:decimal;
+    list-style: decimal;
 }
 
 ul {
-    list-style:disc;
+    list-style: disc;
 }
 
 li {

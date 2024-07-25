@@ -15,7 +15,7 @@ export LFS=/mnt/lfs
 Suggested in the LFS Guide, references the directory where you mounted the root partition of LFS on the host system (absolutely do this). I also did this for my other partitions, BOOT and HOME.
 
 ```bash
-alias wgetL='wget --directory-prefix=$LFS/sources'
+alias wgetL='wget --directory-prefix=$LFS/sources' 
 ```
 For downloading to the tarballs to the sources directory. I also suggest creating a wget list, that way you only have to run it once for the main packages. I mainly used this for other tools that I wanted to add from BLFS, like git and the UEFI tools, which aren't in LFS by default.
 

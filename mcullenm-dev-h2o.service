@@ -1,0 +1,7 @@
+[Unit]
+Description=Server for mcullenm.dev
+
+[Service]
+User=luckymcbeast
+ExecStart=docker start mcullenm_dev_h2o
+ExecStop=docker stop mcullenm_dev_h2o

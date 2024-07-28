@@ -15,40 +15,35 @@
     <script defer type="module" src="../components/BlogItem.js"></script>
     <script defer type="module" src="../components/NavBar.js"></script>
     <script defer src="../components/PageHeader.js"></script>
+    <script defer src="../components/SitePage.js"></script>
     <title>M. Cullen McClellan</title>
 </head>
 
-<body class="h-screen lg:mx-36 my-5">
-    <div class="grid justify-items-center">
-        <div class="grid w-full max-w-screen-lg">
-            <page-header/>
-        </div>
-        <div class="divider divider-secondary w-full max-w-screen-lg"></div>
-        <div class="flex flex-col w-[75%] max-w-screen-lg text-left gap-2">
-            <h1 class="text-info text-3xl font-bold">blog</h1>
-            <p>I write blogs about software development, agile, and other technical topics.</p>
-            <ul class="p-4 text-md md:text-lg bg-base-200 border border-secondary">
-                <blog-item date="07-25-2024" href="expectations.html">
-                    Setting Expectations in the Uncertain World of Software Development
-                </blog-item>
-                <blog-item date="03-07-2023" href="first-rev.html">
-                    Major Changes to the Site (First Revision)
-                </blog-item>
-                <blog-item date="09-05-2022" href="lfs.html">
-                    Building Linux From Scratch
-                </blog-item>
-                <blog-item date="08-16-2022" href="tdd.html">
-                    Test Driven Development: What it is and what it isn&apos;t
-                </blog-item>
-                <blog-item date="08-14-2022" href="original-site.html">
-                    How I Made This Site (Original Site)
-                </blog-item>
-                <blog-item date="02-25-2022" href="rest.html">
-                    REST: What it is and How to Use it
-                </blog-item>
-            </ul>
-        </div>
+<site-page>
+    <div slot="content" class="flex flex-col w-[75%] max-w-screen-lg text-left gap-2">
+        <h1 class="text-info text-3xl font-bold">blog</h1>
+        <p>I write blogs about software development, agile, and other technical topics.</p>
+        <ul class="p-4 text-md md:text-lg bg-base-200 border border-secondary">
+            <blog-item date="07-25-2024" href="expectations.html">
+                Setting Expectations in the Uncertain World of Software Development
+            </blog-item>
+            <blog-item date="03-07-2023" href="first-rev.html">
+                Major Changes to the Site (First Revision)
+            </blog-item>
+            <blog-item date="09-05-2022" href="lfs.html">
+                Building Linux From Scratch
+            </blog-item>
+            <blog-item date="08-16-2022" href="tdd.html">
+                Test Driven Development: What it is and what it isn&apos;t
+            </blog-item>
+            <blog-item date="08-14-2022" href="original-site.html">
+                How I Made This Site (Original Site)
+            </blog-item>
+            <blog-item date="02-25-2022" href="rest.html">
+                REST: What it is and How to Use it
+            </blog-item>
+        </ul>
     </div>
-</body>
+</site-page>
 
 </html>

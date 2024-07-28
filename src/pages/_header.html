@@ -17,13 +17,9 @@
   <script src="../scripts/highlight.min.js"></script>
   <script defer type="module" src="../components/NavBar.js"></script>
   <script defer src="../components/PageHeader.js"></script>
+  <script defer src="../components/SitePage.js"></script>
   <title>M. Cullen McClellan</title>
 </head>
 
-<body class="h-screen lg:mx-36 my-5">
-  <div class="grid justify-items-center">
-    <div class="grid w-full max-w-screen-lg">
-      <page-header/>
-    </div>
-    <div class="divider divider-secondary w-full md:max-w-screen-lg"></div>
-    <article class="p-10 object-contain md:max-w-screen-lg">
+<site-page>
+    <article slot="content" class="p-10 object-contain md:max-w-screen-lg">

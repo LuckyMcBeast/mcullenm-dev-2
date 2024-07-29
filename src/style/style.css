@@ -20,4 +20,8 @@
   a {
     @apply hover:italic
   }
+
+  #force-into-minified-tailwind {
+    @apply text-6xl
+  }
 }

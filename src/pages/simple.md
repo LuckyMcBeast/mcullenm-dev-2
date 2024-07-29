@@ -21,7 +21,7 @@ One aspect of web development that always seems to be offloaded to a service pro
 
 Without going into too many details here, I'm using an open source hypervisor called Proxmox, which has similar feature to the commercial product VMWare, to host services at home. This, along with [Cloudflare Tunnels](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/), allows me to basically have my own cloud environment and much more control than I would have using a provider.
 
-The main decision left for this aspect of the the site is how to server it. I considered using Kotlin with Netty via either Spring Boot or Ktor to serve webpages, but wanted something a little more barebones. Around the same time I started looking into Markdown static site generation, I learned about a *newer* HTTP server called [H2O](https://h2o.example.net). H2O is supports HTTP/1, 2, and 3, is exceptionally fast, and boasts better performance than Nginx for static file serving. I wanted an excuse to try it out and this site seemed like the perfect opportunity. It's configuration is fairly straight forward:
+The main decision left for this aspect of the the site is how to server it. I considered using Kotlin with Netty via either Spring Boot or Ktor to serve webpages, but wanted something a little more barebones. Around the same time I started looking into Markdown static site generation, I learned about a *newer* HTTP server called [H2O](https://h2o.examp1e.net). H2O is supports HTTP/1, 2, and 3, is exceptionally fast, and boasts better performance than Nginx for static file serving. I wanted an excuse to try it out and this site seemed like the perfect opportunity. It's configuration is fairly straight forward:
 
 ```
 hosts:
@@ -49,7 +49,7 @@ error-log: /dev/stderr
 ### Do I need React? No, not really.
 In the original design of the site, I used React to build the UI and continued this practice on the first revision while using Next.js. Now, I want to be clear, I have no qualms with React or JSX. I feel like it does have it's place. That being said, when I really thought about it, what reactivity did my site really have? All I was doing originally was updating state once I retrieved the blogs from the content management system. With the CMS no longer in play, the only thing I'd be missing out on was reusable components. Luckily, Web Components solve this problem.
 
-If you aren't farmilar, [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) are reusable, custom HTML elements which can be written in vanilla javascript. They have a simple API and allow for some client side reactivity if desired. They fit in well with my more minimal approach. One of the simpliest components that I made was the `nav-bar`:
+If you aren't farmilar, [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) are reusable, custom HTML elements which can be written in vanilla javascript. They have a simple API and allow for some client side reactivity if desired. They fit in well with my more minimal approach. One of the simplest components that I made was the `nav-bar`:
 
 ```js
 import { attrTextContent } from "./helper.js"

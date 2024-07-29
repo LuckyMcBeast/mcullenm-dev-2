@@ -14,5 +14,5 @@ After making these changes, my applications performance improved substantially a
 Overall, I am happy with the changes I’ve made thus far, especially in regards to performance, but I’m definitely not finished yet. In some ways, I am dissatisfied with the UI and am considering doing a complete overhaul in favor of something far more simple. I also still do not have image capabilities, nor can I store text of a different content type within another type, i.e. bold text or a hyperlink within a paragraph. In the next iteration of the site, I plan to implement these features and more.
 
 #### Other posts about the evolution of this site:
-- [Orginal site design article](original-site.html)
-- [Lastest revision article](simple.html)
+- [Original site design article](original-site.html)
+- [Latest revision article](simple.html)

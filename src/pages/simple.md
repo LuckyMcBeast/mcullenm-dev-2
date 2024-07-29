@@ -168,10 +168,10 @@ mv dist/pages/sitemap.xml dist/sitemap.xml
 ### Creating the Look and Feel
 
 #### Tailwind CSS and daisyUI
-To be completely honest, I've always been somewhat frustrated by UI design and styling. [Tailwind CSS](https://tailwindcss.com/) definitely makes this easier and I would rather not go without it. [daisyUI](https://daisyui.com/) takes Tailwind's declarative approach a step further by setting a unified color pallet and providing basic UI components. It was a bit of challenge to setup, since this site does not use node modules and daisyUI expects that you are. I was able to overcome this with the help of a modified version of the Tailwind CLI tool that is repackaged with DaisyUI, [tailwind-cli-extra](https://github.com/dobicinaitis/tailwind-cli-extra) by dobicinatis.
+To be completely honest, I've always been somewhat frustrated by UI design and styling. [Tailwind CSS](https://tailwindcss.com/) definitely makes this easier and I would rather not go without it. [daisyUI](https://daisyui.com/) takes Tailwind's declarative approach a step further by setting a unified color pallet and providing basic UI components. It was a bit of challenge to setup, since this site does not use npm (or another package manager) and daisyUI requires it. I was able to overcome this with the help of a modified version of the Tailwind CLI tool that is repackaged with daisyUI, [tailwind-cli-extra](https://github.com/dobicinaitis/tailwind-cli-extra) by dobicinatis.
 
 #### Gruvbox Dark Material Theme (Slightly Modified)
-Gruvbox is by far one of the most popular base-16 color themes and one that I've been using in the terminal for quite a while. The material version has an 8 color palette, which is great when you don't actually need 16 unique colors. I applied this theme in my `tailwind.config.js` with an additional color that I selected myself (base-200), nine colors in total:
+Gruvbox is by far one of the most popular base-16 color themes and one that I've been using in the terminal for quite a while. The material version has an 8 color palette, which is great when you don't actually need 16 unique colors. I applied this theme to daisyUI in my `tailwind.config.js` file with an additional color that I selected myself (base-200), nine colors in total:
 
 ```
 gruvboxmaterial: {
@@ -190,13 +190,13 @@ gruvboxmaterial: {
     }
 ```
 
-See this theme in action with DaisyUI [here](../style-example.html).
+See this theme in action with daisyUI [here](../style-example.html).
 
 #### Blog Page Styling and Highlight.js
-Styling the blog pages could be partially done with Tailwind and daisyUI, specifically for the header and footer, but the HTML generated from Markdown would need to be styled differently, as the ssg utility has no understanding of the framework. To keep things as simple as possible, I created a style sheet specifically for the blog pages. One thing was still laking, however, syntax highlighting for code. To solve this, I included [highlight.js](https://highlightjs.org/) as minified script in the project.
+Styling the blog pages could be partially done with Tailwind and daisyUI, specifically for the header and footer, but the HTML generated from Markdown would need to be styled differently, as the ssg utility has no understanding of the Tailwind. To keep things as simple as possible, I created a style sheet specifically for the blog pages. One thing was still laking, however, syntax highlighting for code. To solve this, I included [highlight.js](https://highlightjs.org/) as minified script in the project.
 
 ## Retrospective and Conclusion
-I am very happy with the new site. I feel like it's much cleaner, is very performant, and has none of the weirdness that I faced in previous versions from time to time (for example, service restarts without cause and static site elements revert back to previously compiled version on Vercel after Incremental Site Regeneration). The system is simple overall and I absolutely love the build system. 
+I am very happy with the new site. It feels much cleaner, is very performant, and has none of the weirdness that I faced in previous versions from time to time. The system is simple overall and I absolutely love the build system. 
 
 That being said, I am considering adding another feature: users with email authentication and comments, which will mean some sort of backend system. I will likely use [htmx](https://htmx.org/) to facilitate interactions with that system on the frontend.
 

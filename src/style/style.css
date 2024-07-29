@@ -20,8 +20,5 @@
   a {
     @apply hover:italic
   }
-}
 
-#status-code {
-  font-size: 3.75rem
 }

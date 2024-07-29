@@ -12,7 +12,7 @@ module.exports = {
           "accent": "#D3869B", //purple
           "neutral": "#3C3836", //charcoal
           "base-100": "#3C3836", //charcoal
-          "base-200": "#39373d",
+          "base-200": "#2a292e", //dark navy
           "info": "#7DAEA3", //blue
           "success": "#A9B665", //green
           "warning": "#D8A657", //yellow

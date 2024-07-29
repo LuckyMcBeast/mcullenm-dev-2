@@ -47,9 +47,9 @@ error-log: /dev/stderr
 ```
 
 ### Do I need React? No, not really.
-In the original design of the site, I used React to build the UI and continued this practice on the first revision while using Next.js. Now, I want to be clear, I have no qualms with React or JSX. I feel like it does have it's place. That being said, when I really thought about it, what reactivity did my site really have? All I was doing originally was updating state once I retrieved the blogs from the content management system. With the CMS no longer in play, the only thing I'd be missing out on was reusable components. Luckily, Web Components solve this problem.
+In the original design of the site, I used React to build the UI and continued this practice on the first revision while using Next.js. Now, I want to be clear, I have no qualms with React or JSX. I feel like they do have their place. That being said, what reactivity did my site really have? All I was doing originally was updating state after retrieving the blogs from the content management system. With the CMS no longer in play, the only thing I'd be missing out on was reusable components. Luckily, Web Components solve this problem.
 
-If you aren't farmilar, [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) are reusable, custom HTML elements which can be written in vanilla javascript. They have a simple API and allow for some client side reactivity if desired. They fit in well with my more minimal approach. One of the simplest components that I made was the `nav-bar`:
+If you aren't farmilar, [Web Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) are reusable, custom HTML elements which can be written in vanilla javascript. They have a simple API and allow for some client side reactivity if desired. They fit in quite nicely with my more minimal approach. One of the simplest components that I made was the `nav-bar`:
 
 ```js
 import { attrTextContent } from "./helper.js"
@@ -80,13 +80,13 @@ Usage of the `nav-bar`:
 <nav-bar size="btn-sm" />
 ```
 
-This implementation doesn't use templates, slots, or the shadow dom, but if you are interested you take take a look at [SitePage.js](../components/SitePage.js) or any of my other components on [Github](https://github.com/LuckyMcBeast/mcullenm-dev-2/tree/main/src/components).
+This particular implementation doesn't use templates, slots, or the shadow dom, but if you are interested, can you take take a look at [SitePage.js](../components/SitePage.js) or any of my other components on [Github](https://github.com/LuckyMcBeast/mcullenm-dev-2/tree/main/src/components).
 
 ### Building and bundling the site: Make, a Container, and a Shell Script 
-There are tons of build tool for websites. Vite and Webpack immediately come to mind. I didn't really want to use these, primarily, because I wanted to establish my own build process using the tools that I know.
+There are tons of build tool for websites. Vite and Webpack immediately come to mind. I didn't really want to use these, primarily because I wanted to establish my own build process using the tools that I know well.
 
 #### make
-Enter [make](https://linux.die.net/man/1/make), a simple GNU utility that is often used to compile and install low-level programs. Without going into too much detail, to use `make` you create a Makefile with the instructions that should be performed based to "make" whatever it is that you are making. My Makefile for this site looks like this:
+Enter [make](https://linux.die.net/man/1/make), a simple GNU utility that is often used to compile and install low-level programs. To use `make` you create a Makefile with the instructions that should be performed based to "make" whatever it is that you are making. My Makefile for this site looks like this:
 
 ```
 ENGINE?=podman
@@ -145,7 +145,7 @@ ADD dist /var/www/html
 COPY h2o.conf .
 ```
 
-You maybe wondering why I list both [podman](https://podman.io/) and docker. I actually prefer podman whenever possible, however, on my server I use docker because of services I run isn't compatible with podman. I really hope Docker Compose support in podman improves in the near future.
+You may be wondering why I list both [podman](https://podman.io/) and docker. I actually prefer podman whenever possible, however, on my server I use docker because one of the services I run isn't compatible with podman. I really hope Docker Compose support in podman improves in the near future.
 
 #### The Real Build Step: generate.sh
 The final piece involved in this site's build system is a simple shell script; `generate.sh` executes all of the commands needed to produce a production version of the site:

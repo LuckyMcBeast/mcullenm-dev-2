@@ -6,8 +6,8 @@ class NavBar extends HTMLElement {
         this.innerHTML = `
             <nav class="font-monospace join join-horizontal">
                 <a href="/blog" class="btn btn-info ${attrTextContent("size", this)} join-item">blog</a>
-                <!-- <a href="#" class="btn ${attrTextContent("size", this)} btn-info join-item">videos</a>
-                <a href="#" class="btn ${attrTextContent("size", this)} btn-info join-item">software</a> -->
+                <a href="/mCullenMcClellan_resume.pdf" class="btn ${attrTextContent("size", this)} btn-info join-item">resume</a>
+                <!-- <a href="#" class="btn ${attrTextContent("size", this)} btn-info join-item">software</a> -->
                 <a href="mailto:cullen.mcclellan@mcullenm.dev" class="btn ${attrTextContent("size", this)} btn-error join-item">contact</a>
             </nav>
         `

@@ -2,6 +2,7 @@
 rm -rf dist
 mkdir -p dist/pages
 cp src/*.html dist
+cp src/*.pdf dist
 cp -r src/assets dist
 cp dist/assets/favicon.ico dist
 cp -r src/components dist

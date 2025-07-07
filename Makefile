@@ -1,6 +1,8 @@
 ENGINE?=podman
 CTNAME?=mcullenm_dev
 
+# Lowdown is a pre-requisite, ensure it is installed
+
 build-start: generate-dist build-h2o create-h2o
 
 rebuild: stop-h2o remove-h2o generate-dist build-h2o create-h2o

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker start mcullenm_dev
+docker logs --follow mcullenm_dev

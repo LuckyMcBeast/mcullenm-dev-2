@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#This install script is for Debian/Ubuntu based distributions
+echo "Installing scripts and dependencies..."
+sudo apt update
+sudo apt install lowdown
+sudo cp setup/mcullenm-dev-start setup/mcullenm-dev-stop setup/podman-or-docker /usr/local/bin
+podman-or-docker
+if [ $? -ne 0 ]; then
+  sudo apt install podman
+fi

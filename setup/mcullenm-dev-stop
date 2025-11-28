@@ -1,0 +1,5 @@
+#!/bin/bash
+
+engine=$(podman-or-docker)
+
+$engine stop mcullenm_dev

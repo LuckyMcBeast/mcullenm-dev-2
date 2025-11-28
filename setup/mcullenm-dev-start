@@ -1,0 +1,6 @@
+#!/bin/bash
+
+engine=$(podman-or-docker)
+
+$engine start mcullenm_dev
+$engine logs --follow mcullenm_dev

@@ -3,8 +3,9 @@ Description=Simple Blog Site served with H2o for mcullenm.dev
 After=network.target
 
 [Service]
-User=luckymcbeast
+User=root
 ExecStart=mcullenm-dev-start
+ExecStop=mcullenm-dev-stop
 Restart=on-failure
 
 [Install]
